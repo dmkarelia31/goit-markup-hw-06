@@ -724,8 +724,11 @@ html {
 .subscribe-wrap {
   display: flex;
 }
-.subscribe-title {
+
+.subscribe {
   margin-left: 93px;
+}
+.subscribe-title {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
@@ -736,7 +739,6 @@ html {
 }
 
 .subscribe-input {
-  margin-left: 93px;
   padding-left: 16px;
   width: 358px;
   height: 50px;
@@ -835,7 +837,8 @@ html {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-modal:hover {
+.close-modal:hover,
+.close-modal:focus {
   fill: var(--accent-bg-color);
 }
 
@@ -947,6 +950,10 @@ html {
 .modal-checkbox:checked + .modal-checkbox-text::before {
   background-image: url(../images/icon-check.svg);
   border: none;
+}
+
+.modal-checkbox:focus + .modal-checkbox-text::before {
+  border-color: #2196f3;
 }
 
 .policy-link {
